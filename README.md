@@ -101,53 +101,16 @@ A unified service layer allows enabling/disabling/modifying moderation providers
 1. **Clone the repository**
 ```bash
 git clone https://github.com/Yashash1234/VibeShare.git
-Install frontend dependencies
-
-bash
-Copy code
-cd client
-npm install
-Install backend dependencies
-
-bash
-Copy code
-cd server
-npm install
-Create .env files
-Use .env.example in both folders as reference.
-
-Start backend
-
-bash
-Copy code
-cd server
-npm start
-Start frontend
-
-bash
-Copy code
-cd client
-npm start
-⚙️ Configuration
-Email (for notifications)
-makefile
-Copy code
-EMAIL=
-PASSWORD=
-EMAIL_SERVICE=
-Moderation APIs (optional)
-makefile
-Copy code
-PERSPECTIVE_API_KEY=
-TEXTRAZOR_API_KEY=
-INTERFACE_API_KEY=
-Optional Local Classifier
-See the classifier_server/ folder.
+```
+Install frontend and backend dependencies
 
 Note: Moderation services are optional — the platform still works if unset.
 
-📌 Usage Guide
-👑 Admin Dashboard (/admin)
+---
+
+### 📌 Usage Guide
+
+**👑 Admin Dashboard (/admin)**
 Manage moderators
 
 Manage communities
@@ -156,14 +119,14 @@ Review reports
 
 Configure moderation services
 
-🛡 Moderator
+**🛡 Moderator**
 Emails ending with: @mod.vibeshare.com
 
 Reviews reported posts
 
 Manages assigned communities
 
-👤 User
+**👤 User**
 Create posts
 
 Follow/unfollow
@@ -174,41 +137,32 @@ Save posts
 
 Report harmful content
 
-🧪 Demo Accounts
-👑 Admin Login
-pgsql
-Copy code
-Username: admin
-Password: Admin@123
-👤 Demo User
-graphql
-Copy code
-Email: demo@vibeshare.com
-Password: Demo@123
-👥 Sample Users
-Email	Password
-arjun@vibeshare.com	User@123
-meera@vibeshare.com	User@123
-rohan@vibeshare.com	User@123
-aditi@vibeshare.com	User@123
-rahul@vibeshare.com	User@123
-
-yaml
-Copy code
 
 ---
 
-# 🎉 All done  
-If you want:
+### 🧪 Demo Accounts
 
-✅ A smaller README  
-✅ A more market-friendly short version  
-✅ A version with GIF previews  
-✅ A version tailored for job applications
+**👑 Admin Login**
+Username: admin
+Password: Admin@123
 
-Just say:
+**👤 Demo User**
+Email: demo@vibeshare.com
+Password: Demo@123
 
-👉 **“Give me a recruiter-optimized README”**
+**👥 Sample Users**
+Email	                    Password
+arjun@vibeshare.com         User@123
+meera@vibeshare.com     	User@123
+rohan@vibeshare.com     	User@123
+aditi@vibeshare.com	        User@123
+rahul@vibeshare.com	        User@123
+
+
+
+---
+
+
 
 
 

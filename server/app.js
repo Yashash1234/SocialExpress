@@ -18,6 +18,8 @@ const Database = require("./config/database");
 const decodeToken = require("./middlewares/auth/decodeToken");
 
 const app = express();
+app.set("trust proxy", 1);
+
 
 const cors = require("cors");
 const morgan = require("morgan");
