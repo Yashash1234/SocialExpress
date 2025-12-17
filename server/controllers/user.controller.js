@@ -44,9 +44,13 @@ const signin = async (req, res, next) => {
 
   try {
     const { email, password } = req.body;
+    console.log("BODY:", req.body);
+    console.log("EMAIL:", email);
+    console.log("PASSWORD:", password);
     const existingUser = await User.findOne({
       email: { $eq: email },
     });
+    console.log(existingUser)
     if (!existingUser) {
       await saveLogInfo(
         req,
@@ -64,6 +68,7 @@ const signin = async (req, res, next) => {
       password,
       existingUser.password
     );
+    console.log(isPasswordCorrect)
 
     if (!isPasswordCorrect) {
       await saveLogInfo(
@@ -78,7 +83,7 @@ const signin = async (req, res, next) => {
       });
     }
 
-   
+
 
     const payload = {
       id: existingUser._id,
