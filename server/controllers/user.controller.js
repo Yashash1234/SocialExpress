@@ -44,9 +44,6 @@ const signin = async (req, res, next) => {
 
   try {
     const { email, password } = req.body;
-    console.log("BODY:", req.body);
-    console.log("EMAIL:", email);
-    console.log("PASSWORD:", password);
     const existingUser = await User.findOne({
       email: { $eq: email },
     });
@@ -60,7 +57,7 @@ const signin = async (req, res, next) => {
       );
 
       return res.status(404).json({
-        message: "Invalid credentials",
+        message: "User doesn't Exist!! ",
       });
     }
 
@@ -68,7 +65,7 @@ const signin = async (req, res, next) => {
       password,
       existingUser.password
     );
-    console.log(isPasswordCorrect)
+  
 
     if (!isPasswordCorrect) {
       await saveLogInfo(
